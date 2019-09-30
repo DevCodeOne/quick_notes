@@ -6,10 +6,9 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
-    this->setCentralWidget(ui->textEdit);
-    this->ui->textEdit->setDocument(&currentTextDocument);
+    this->ui->mainedit->setDocument(&currentTextDocument);
 
-    connect(ui->textEdit, &QTextEdit::textChanged, this,
+    connect(ui->mainedit, &QTextEdit::textChanged, this,
             &MainWindow::textChanged);
 }
 
