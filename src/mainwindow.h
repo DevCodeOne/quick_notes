@@ -18,4 +18,5 @@ class MainWindow : public QMainWindow {
     
     private slots:
         void textChanged();
+        void contentsChange(int position, int charsRemoved, int charsAdded);
 };

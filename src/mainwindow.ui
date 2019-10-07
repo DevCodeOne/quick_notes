@@ -26,20 +26,45 @@
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
-      <widget class="QTreeView" name="treeView"/>
-      <widget class="QWidget" name="documentview" native="true">
+      <widget class="QTreeView" name="treeView">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="minimumSize">
+        <size>
+         <width>256</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="animated">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QWidget" name="documentview" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
         <item>
          <widget class="QSplitter" name="viewsplitter">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
+            <horstretch>1</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
@@ -47,6 +72,18 @@
            <enum>Qt::Horizontal</enum>
           </property>
           <widget class="QTextEdit" name="mainedit">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>350</width>
+             <height>0</height>
+            </size>
+           </property>
            <property name="sizeIncrement">
             <size>
              <width>0</width>
@@ -55,8 +92,20 @@
            </property>
           </widget>
           <widget class="QLabel" name="pdfview">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>256</width>
+             <height>0</height>
+            </size>
+           </property>
            <property name="text">
-            <string>Hello World</string>
+            <string>lorem ipsum</string>
            </property>
           </widget>
          </widget>

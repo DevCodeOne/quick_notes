@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.1.0)
 
-project(quick_notels)
+project(quick_notes)
 
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
@@ -15,7 +15,7 @@ endif()
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
-add_executable(quick_notels
+add_executable(quick_notes
     src/main.cpp
     src/mainwindow.ui
     src/mainwindow.cpp
@@ -23,5 +23,5 @@ add_executable(quick_notels
     # resources.qrc
 )
 
-target_link_libraries(quick_notels PRIVATE Qt5::Widgets)
-target_include_directories(quick_notels PRIVATE src)
+target_link_libraries(quick_notes PRIVATE Qt5::Widgets)
+target_include_directories(quick_notes PRIVATE src)
